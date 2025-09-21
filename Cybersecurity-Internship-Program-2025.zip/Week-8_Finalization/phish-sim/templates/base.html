@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>PhishSim — Training</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body>
+    <header>
+      <h1>PhishSim (Training Simulator)</h1>
+      <nav>
+        <a href="{{ url_for('simulate') }}">Simulate</a> |
+        <a href="{{ url_for('dashboard') }}">Dashboard</a> |
+        <a href="{{ url_for('consent') }}">Consent</a>
+      </nav>
+    </header>
+    <main>
+      {% block content %}{% endblock %}
+    </main>
+    <footer>
+      <small>Training only — no emails sent. For authorized use only.</small>
+    </footer>
+  </body>
+</html>

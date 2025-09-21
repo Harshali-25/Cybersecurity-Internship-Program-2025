@@ -1,0 +1,11 @@
+body { font-family: Arial, sans-serif; margin: 20px; background:#fafafa; color:#222; }
+header { margin-bottom: 20px; }
+nav a { margin-right: 8px; text-decoration: none; color:#333; }
+.card { background: white; padding: 15px; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.08); max-width:800px; }
+pre.body { white-space: pre-wrap; font-family: monospace; background:#f7f7f7; padding:10px; border-radius:6px; }
+.actions { margin-top: 12px; display:flex; gap:8px; }
+button { padding: 8px 12px; border-radius:6px; border: none; cursor:pointer; font-weight:600; }
+.btn-report { background:#2d9c73; color:white; }
+.btn-ignore { background:#9aa0a6; color:white; }
+.btn-click { background:#d9534f; color:white; }
+footer { margin-top: 30px; color:#666; }

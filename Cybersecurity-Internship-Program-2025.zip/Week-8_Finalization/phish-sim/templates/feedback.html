@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+  <h2>Feedback</h2>
+  {% if result == "report" %}
+    <p><strong>Nice — you reported it.</strong> That’s the correct action for suspicious messages. Key signs: urgent language, unexpected attachments/links, mismatched sender.</p>
+  {% elif result == "click" %}
+    <p><strong>You clicked/opened the link.</strong> In real life this is risky. Common red flags you may have missed:</p>
+    <ul>
+      <li>Unexpected sender or unknown domain</li>
+      <li>Urgency or threats (like "act now")</li>
+      <li>Link mismatch (hover to see real URL)</li>
+    </ul>
+    <p>Remember: never enter credentials on an unknown site. This is a simulation — no data was collected.</p>
+  {% else %}
+    <p>You ignored it. That’s safe if you were unsure, but best practice is to <strong>report</strong> suspicious messages to security so they can investigate.</p>
+  {% endif %}
+  <p><a href="{{ url_for('simulate') }}">Try another simulation</a> | <a href="{{ url_for('dashboard') }}">View dashboard</a></p>
+{% endblock %}

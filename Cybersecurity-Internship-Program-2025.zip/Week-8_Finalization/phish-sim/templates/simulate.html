@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+  <h2>Simulated Message</h2>
+  <div class="card">
+    <h3>{{ msg.subject }}</h3>
+    <pre class="body">{{ msg.body }}</pre>
+    <div class="actions">
+      <form method="post" action="{{ url_for('action') }}">
+        <input type="hidden" name="action" value="report">
+        <button type="submit" class="btn-report">Report</button>
+      </form>
+      <form method="post" action="{{ url_for('action') }}">
+        <input type="hidden" name="action" value="ignore">
+        <button type="submit" class="btn-ignore">Ignore</button>
+      </form>
+      <form method="post" action="{{ url_for('action') }}">
+        <input type="hidden" name="action" value="click">
+        <button type="submit" class="btn-click">Open / Click</button>
+      </form>
+    </div>
+  </div>
+{% endblock %}
